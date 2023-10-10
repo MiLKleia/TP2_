@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StatementPrinterTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-10-07T11:31:44" hostname="LINUX-BV7X2X2" time="0.143">
+<testsuite name="StatementPrinterTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-10-10T14:36:18" hostname="nes-Modern-15-A11M" time="0.205">
   <properties/>
-  <testcase name="exampleStatement()" classname="StatementPrinterTests" time="0.133"/>
-  <testcase name="statementWithNewPlayTypes()" classname="StatementPrinterTests" time="0.009"/>
+  <testcase name="test Comedy and over 20 pers" classname="StatementPrinterTests" time="0.139"/>
+  <testcase name="exampleStatement" classname="StatementPrinterTests" time="0.014"/>
+  <testcase name="statementWithNewPlayTypes" classname="StatementPrinterTests" time="0.007"/>
+  <testcase name="test tragedy and less than 30 pers" classname="StatementPrinterTests" time="0.012"/>
+  <testcase name="test comedy and less than 20 pers" classname="StatementPrinterTests" time="0.012"/>
+  <testcase name="test tragedy and over 30 pers" classname="StatementPrinterTests" time="0.015"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
