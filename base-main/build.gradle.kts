@@ -3,6 +3,8 @@ plugins {
     jacoco
     checkstyle
     pmd
+    //id "java" //or 'java-library' - depending on your needs
+    //id "info.solidsoft.pitest" version "1.15.0"
 }
 
 repositories {

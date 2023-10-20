@@ -131,7 +131,7 @@ public class StatementPrinterTests {
                 new Performance("as-like", 15)));
         StatementPrinter statementPrinter = new StatementPrinter();
      
-        int result = statementPrinter.html_print(invoice, plays);
+        int result = statementPrinter.html_print(statementPrinter.print(invoice, plays));
 
        assert result == 0; 
     }
