@@ -11,23 +11,3 @@ adding new type into the switch case in performanc.java
 
 
 
-/// okay, moved into performance.java
-
-tragedy :
-	out = 40000
-	if x > 30:
-		out += 1000 *(x-30)
-comedy :
-	out = 30000
-	if x > 20:
-		out += 10000 + 500 *(x-20)
-	out += 300 * x
-	
-totalAmount += out;   // if it's a list, then we need to calculate the sum
-
-
-out = max( x - 30, 0);
-if comedy :
-	out += floor( x/5 )
-
-volume Credits += out;

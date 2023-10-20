@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StatementPrinterTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-10-20T11:40:43" hostname="nes-Modern-15-A11M" time="0.198">
+<testsuite name="StatementPrinterTests" tests="7" skipped="0" failures="0" errors="0" timestamp="2023-10-20T12:39:33" hostname="nes-Modern-15-A11M" time="0.34">
   <properties/>
-  <testcase name="test Comedy and over 20 pers" classname="StatementPrinterTests" time="0.125"/>
-  <testcase name="exampleStatement" classname="StatementPrinterTests" time="0.016"/>
-  <testcase name="statementWithNewPlayTypes" classname="StatementPrinterTests" time="0.008"/>
-  <testcase name="test tragedy and less than 30 pers" classname="StatementPrinterTests" time="0.015"/>
-  <testcase name="test comedy and less than 20 pers" classname="StatementPrinterTests" time="0.014"/>
-  <testcase name="test tragedy and over 30 pers" classname="StatementPrinterTests" time="0.016"/>
+  <testcase name="file writer" classname="StatementPrinterTests" time="0.049"/>
+  <testcase name="test Comedy and over 20 pers" classname="StatementPrinterTests" time="0.161"/>
+  <testcase name="exampleStatement" classname="StatementPrinterTests" time="0.029"/>
+  <testcase name="statementWithNewPlayTypes" classname="StatementPrinterTests" time="0.009"/>
+  <testcase name="test tragedy and less than 30 pers" classname="StatementPrinterTests" time="0.031"/>
+  <testcase name="test comedy and less than 20 pers" classname="StatementPrinterTests" time="0.027"/>
+  <testcase name="test tragedy and over 30 pers" classname="StatementPrinterTests" time="0.025"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

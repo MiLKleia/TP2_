@@ -120,6 +120,22 @@ public class StatementPrinterTests {
 
     }
 
+     @Test
+    @DisplayName("file writer")
+    void write_a_file() {
+
+        HashMap<String, Play> plays = new HashMap<>();
+        plays.put("as-like",  new Play("As You Like It", "comedy"));
+        
+        Invoice invoice = new Invoice("BigCo", List.of(
+                new Performance("as-like", 15)));
+        StatementPrinter statementPrinter = new StatementPrinter();
+     
+        int result = statementPrinter.html_print(invoice, plays);
+
+       assert result == 0; 
+    }
+
    
 
 
