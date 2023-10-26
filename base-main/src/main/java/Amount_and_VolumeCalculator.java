@@ -6,7 +6,6 @@ public class Amount_and_VolumeCalculator {
     private int volume;
     private int amount;
 
-
     // TODO GET pas ouf
 
     public Integer getAmount() {
@@ -28,7 +27,6 @@ public class Amount_and_VolumeCalculator {
             this.amount = types.get(type).getAmount(perf);
             this.volume = types.get(type).getVolume(perf);
         }
-
     }
 }
     

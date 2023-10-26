@@ -1,14 +1,7 @@
-but retirer la hash map, utiliser seulement invoice
-playId will become playname and we add type into performance.java so that we don't need to use play.java
-
-play.java could be useful if we had a catalog of played stored 'outside', such as a .txt or a .csv and play would get all those value every time (plus add some function to add/delete line from this file) => too long, not asked
-But as it is, we would prefer to get ride of the hash map and searching threw it as we define it just before using => redundancy
-Adding 1 parameter to performance.java allow us to get rid of play.java and having to create a list of play to search for the type.
-
-adding new type into the switch case in performanc.java
+Tmp_memory
 
 
-UGLY but working : 
+UGLY but working [HTML]: 
 
 public int html_print(Invoice invoice, HashMap<String, Play> plays) {
     int totalAmount = 0;

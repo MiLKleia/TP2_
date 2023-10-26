@@ -120,21 +120,58 @@ public class StatementPrinterTests {
 
     }
 
-     @Test
-    @DisplayName("file writer")
-    void write_a_file() {
+
+    @Test
+    @DisplayName("html  no link")
+    void write_a_html_into_the_file() {
 
         HashMap<String, Play> plays = new HashMap<>();
+        plays.put("hamlet",  new Play("Hamlet", "tragedy"));
         plays.put("as-like",  new Play("As You Like It", "comedy"));
-        
-        Invoice invoice = new Invoice("BigCo", List.of(
-                new Performance("as-like", 15)));
-        StatementPrinter statementPrinter = new StatementPrinter();
-     
-        int result = statementPrinter.html_print(statementPrinter.print(invoice, plays));
+        plays.put("othello",  new Play("Othello", "tragedy"));
 
-       assert result == 0; 
+        Invoice invoice = new Invoice("BigCo", List.of(
+                new Performance("hamlet", 55),
+                new Performance("as-like", 35),
+                new Performance("othello", 40)));
+
+        StatementPrinter statementPrinter = new StatementPrinter();
+        var not_html_str = statementPrinter.print(invoice, plays);
+
+        htmlPrinter to_html = new htmlPrinter();
+
+        to_html.html_print(not_html_str);
+        Assertions.assertDoesNotThrow(() -> to_html.html_print(not_html_str), "erreur lors de la creation du ficheir html ");
+
     }
+
+    @Test
+    @DisplayName("html  no link")
+    void write_a_html_with_a_link() {
+
+        HashMap<String, Play> plays = new HashMap<>();
+        plays.put("hamlet",  new Play("Hamlet", "tragedy"));
+        plays.put("as-like",  new Play("As You Like It", "comedy"));
+        plays.put("othello",  new Play("Othello", "tragedy"));
+
+        Invoice invoice = new Invoice("BigCo", List.of(
+                new Performance("hamlet", 55),
+                new Performance("as-like", 35),
+                new Performance("othello", 40)));
+
+        StatementPrinter statementPrinter = new StatementPrinter();
+        var not_html_str = statementPrinter.print(invoice, plays);
+
+        // ADAPT LINK FOR YOUR COMPUTER
+        htmlPrinter to_html = new htmlPrinter("/home/nes/tmp/");
+
+     
+        to_html.html_print(not_html_str);
+
+        Assertions.assertDoesNotThrow(() -> to_html.html_print(not_html_str), "erreur lors de la creation du ficheir html avec une direction");
+
+    }
+
 
    
 

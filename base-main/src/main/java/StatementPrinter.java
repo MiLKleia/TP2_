@@ -6,8 +6,6 @@ import java.nio.charset.Charset;
 import java.text.NumberFormat;
 import java.util.*;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 public class StatementPrinter {
 
@@ -16,40 +14,7 @@ public class StatementPrinter {
 
 
 
-  public String html_str_convert(String statement_str) {
-    String lines[] = statement_str.split("\\r?\\n");
-    String result = String.format("<!doctype html> <html lang=\"en-US\"> <head> <meta charset=\"utf-8\" /> <title> Statement </title> </head> <body>");
-    for (String i : lines){
-      result += String.format("<p> %s </p>", i );
-    }
-     result += String.format("</body> </html>"); 
-     return result; 
-    }
-
-
-  public int html_print(String statement_str) {
-    String lines[] = statement_str.split("\\r?\\n");
-    String file_name = String.format("%s.html", lines[0]);
-    File file = new File(file_name);
-    String result = html_str_convert( statement_str); 
-
-    // Creation and writing of the file
-    try {
-            file.createNewFile();
-        } catch (IOException e1) {
-            e1.printStackTrace();
-        }try {
-            PrintWriter out = new PrintWriter(file);
-            out.println(result);
-            out.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-  
-    return 0;
-  }
-
-  private String print_string(String Customer, List<String> volume_credit, List<String> play_audience){
+  private String string_creator(String Customer, List<String> volume_credit, List<String> play_audience){
     String result = String.format("Statement for %s\n", Customer);
     NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
     int compteur = 0;
@@ -64,10 +29,6 @@ public class StatementPrinter {
     return result;
 
   }
-
-
-
-
 
 
   public String print(Invoice invoice, HashMap<String, Play> plays) {
@@ -95,7 +56,7 @@ public class StatementPrinter {
     volume_credit.add(String.valueOf(totalAmount/100));
     volume_credit.add(String.valueOf(volumeCredits));
 
-    String result = print_string(invoice.customer, volume_credit, play_audience );
+    String result = string_creator(invoice.customer, volume_credit, play_audience );
     
     return result;
   }
