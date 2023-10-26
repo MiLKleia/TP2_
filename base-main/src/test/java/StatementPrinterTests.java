@@ -146,8 +146,8 @@ public class StatementPrinterTests {
     }
 
     @Test
-    @DisplayName("html  no link")
-    void write_a_html_with_a_link() {
+    @DisplayName("html with directory")
+    void write_a_html_with_a_directory() {
 
         HashMap<String, Play> plays = new HashMap<>();
         plays.put("hamlet",  new Play("Hamlet", "tragedy"));
@@ -162,7 +162,7 @@ public class StatementPrinterTests {
         StatementPrinter statementPrinter = new StatementPrinter();
         var not_html_str = statementPrinter.print(invoice, plays);
 
-        // ADAPT LINK FOR YOUR COMPUTER
+        // ADAPT DIRECTORY FOR YOUR COMPUTER
         htmlPrinter to_html = new htmlPrinter("/home/nes/tmp/");
 
      

@@ -6,8 +6,6 @@ public class Amount_and_VolumeCalculator {
     private int volume;
     private int amount;
 
-    // TODO GET pas ouf
-
     public Integer getAmount() {
             return amount;
         }
