@@ -9,11 +9,6 @@ import java.util.*;
 
 public class StatementPrinter {
 
-  private Play playForPerformance(Performance perf, Map<String, Play> plays) {
-    return plays.get(perf.playID); }
-
-
-
   private String string_creator(String Customer, List<String> volume_credit, List<String> play_audience){
     String result = String.format("Statement for %s\n", Customer);
     NumberFormat frmt = NumberFormat.getCurrencyInstance(Locale.US);
@@ -39,7 +34,7 @@ public class StatementPrinter {
 
 
     for (Performance perf : invoice.performances) {
-      Play play = playForPerformance(perf, plays);
+      Play play = plays.get(perf.playID);
       play_audience.add(play.name);
       play_audience.add(String.valueOf(perf.audience));
 

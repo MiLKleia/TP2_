@@ -5,9 +5,8 @@ import java.io.PrintWriter;
 
 public class htmlPrinter {
 
-    private String location;
+    private String directory;
 
- 
     private String string2html_better(String statement_str) {
         String lines[] = statement_str.split("\\r?\\n");
         String result = String.format("<!doctype html> <html lang=\"en-US\"> <head> <meta charset=\"utf-8\" /> <title> Statement </title> </head> <body>");
@@ -29,7 +28,7 @@ public class htmlPrinter {
         String result = string2html_better(statement_str);
 
         String lines[] = statement_str.split("\\r?\\n");
-        String file_name = location;
+        String file_name = directory;
         file_name += String.format("%s.html", lines[0]);
         File file = new File(file_name);
 
@@ -48,11 +47,11 @@ public class htmlPrinter {
   }
 
   public htmlPrinter(){
-    this.location = "";
+    this.directory = "";
   }
 
-  public htmlPrinter(String location_given){
-    this.location = location_given;
+  public htmlPrinter(String directory_given){
+    this.directory = directory_given;
   }
 
 
