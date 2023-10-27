@@ -7,19 +7,26 @@ public class htmlPrinter {
 
     private String location;
 
-    private String string2html(String statement_str) {
+ 
+    private String string2html_better(String statement_str) {
         String lines[] = statement_str.split("\\r?\\n");
         String result = String.format("<!doctype html> <html lang=\"en-US\"> <head> <meta charset=\"utf-8\" /> <title> Statement </title> </head> <body>");
-        for (String i : lines){
-          result += String.format("<p> %s </p>", i );
+        int lenght_ = lines.length;
+        
+        result += String.format("<h2>%s</h2>  <ul style=\"list-style-type:circle;\">", lines[0] );
+        
+        for (int i = 1 ;  i<= lenght_ - 2 ;  i +=2){
+          result += String.format("<li> %s </li>", lines[i] );
         }
-         result += String.format("</body> </html>"); 
-         return result; 
+
+        result += String.format("</ul>  <hr> <p> %s <br>  %s <p/>",  lines[lenght_ -2], lines[lenght_ -1]);
+        result += String.format("</body> </html>"); 
+        return result; 
         }
 
 
     public void html_print(String statement_str) {
-        String result = string2html(statement_str); 
+        String result = string2html_better(statement_str);
 
         String lines[] = statement_str.split("\\r?\\n");
         String file_name = location;
