@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StatementPrinterTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-10-26T09:10:22" hostname="nes-Modern-15-A11M" time="0.251">
+<testsuite name="StatementPrinterTests" tests="8" skipped="0" failures="0" errors="0" timestamp="2023-10-27T11:25:34" hostname="nes-Modern-15-A11M" time="0.215">
   <properties/>
-  <testcase name="html  no link" classname="StatementPrinterTests" time="0.054"/>
-  <testcase name="test Comedy and over 20 pers" classname="StatementPrinterTests" time="0.135"/>
+  <testcase name="html  no link" classname="StatementPrinterTests" time="0.046"/>
+  <testcase name="test Comedy and over 20 pers" classname="StatementPrinterTests" time="0.108"/>
   <testcase name="html with directory" classname="StatementPrinterTests" time="0.002"/>
-  <testcase name="exampleStatement" classname="StatementPrinterTests" time="0.014"/>
+  <testcase name="exampleStatement" classname="StatementPrinterTests" time="0.013"/>
   <testcase name="statementWithNewPlayTypes" classname="StatementPrinterTests" time="0.003"/>
-  <testcase name="test tragedy and less than 30 pers" classname="StatementPrinterTests" time="0.014"/>
+  <testcase name="test tragedy and less than 30 pers" classname="StatementPrinterTests" time="0.013"/>
   <testcase name="test comedy and less than 20 pers" classname="StatementPrinterTests" time="0.013"/>
   <testcase name="test tragedy and over 30 pers" classname="StatementPrinterTests" time="0.012"/>
   <system-out><![CDATA[]]></system-out>

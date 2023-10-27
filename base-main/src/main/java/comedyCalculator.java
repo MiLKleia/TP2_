@@ -1,4 +1,4 @@
-public class comedyClaculator implements calculator {
+public class comedyCalculator implements calculator {
     @Override
     public int getAmount(Performance perf) {
         int amount_out = 0; 

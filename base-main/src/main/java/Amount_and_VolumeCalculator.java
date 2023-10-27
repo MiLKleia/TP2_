@@ -17,7 +17,7 @@ public class Amount_and_VolumeCalculator {
     public Amount_and_VolumeCalculator(String type, Performance perf){
         Map<String, calculator> types = new HashMap<>();
         types.put("tragedy", new tragedyCalculator());
-        types.put("comedy", new comedyClaculator());
+        types.put("comedy", new comedyCalculator());
 
         if (!types.containsKey(type)) {
             throw new Error("Unknown type: " + type);
